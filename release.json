@@ -12,9 +12,14 @@
             "dirs":     [ "configs" ]
         },
         {
+            "method":   "apply",
+            "root":     "",
+            "files":     [ "readme.txt" ]
+        },
+        {
             "method":   "plain",
             "root":     "",
-            "files":     [ "readme.txt", "readme.md" ]
+            "files":     [ "readme.md" ]
         }
     ]
 }
