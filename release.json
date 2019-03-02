@@ -14,7 +14,7 @@
         {
             "method":   "plain",
             "root":     "",
-            "files":     [ "readme.txt" ]
+            "files":     [ "readme.txt", "readme.md" ]
         }
     ]
 }
