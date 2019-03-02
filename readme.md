@@ -6,21 +6,21 @@
 
 ## インストール
 
-WoT の mods フォルダ \<WoT_game_folder\>/mods/\<WoT_version\> に
-chirimen.sryff_\<version\>.wotmod ファイルをコピーします。
+WoT の mods フォルダ `<WoT_game_folder>/mods/<WoT_version>` に
+wotmod ファイル `chirimen.sryff_<version>.wotmod` をコピーします。
 
-mods フォルダは例えば "C:\Games\World_of_Tanks\mods\1.4.0.1" のようになっていて、
-wotmod ファイルは "chirimen.sryff_0.2.wotmod" のようになっています。
+mods フォルダは例えば `C:\Games\World_of_Tanks\mods\1.4.0.1` のようになっていて、
+wotmod ファイルは `chirimen.sryff_0.2.wotmod` のようになっています。
 バージョン番号のところは適当に読み替えてください。
 
 ## 設定
 
 デフォルトの動作を変更したいときは設定ファイルを置きます。
 
-設定ファイルは \<WoT_game_folder\>/mods/configs/chirimen.sryff/config.xml です。
+設定ファイルは `<WoT_game_folder>/mods/configs/chirimen.sryff/config.xml` です。
 バージョン番号はありません。
 
-設定ファイルは XML です。
+設定ファイルは XML 形式です（エンコーディングは UTF-8）。
 デフォルトの設定は次のような設定と同じです。
 
 ```
@@ -31,14 +31,14 @@ wotmod ファイルは "chirimen.sryff_0.2.wotmod" のようになっていま�
 </config.xml>
 ```
 
-+ delay:
++ `delay`
 射撃後にチームチャットを送るまでの遅延（秒）です。
 デフォルトでは 3.0 秒後にチャットを送ります。
-+ cooldown:
++ `cooldown`
 チームチャットを送ってから、次に SryFF が有効になるまでの時間（秒）です。
 機関砲などでチャットを送りすぎないように設定します。
 デフォルトでは 12.0 秒間はチャットを送りません。
-+ message:
++ `message`
 送るべきチームチャットの内容です。
 デフォルトでは単に "sry" と送ります。
 
