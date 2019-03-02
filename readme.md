@@ -42,3 +42,23 @@ wotmod ファイルは "chirimen.sryff_0.2.wotmod" のようになっていま�
 送るべきチームチャットの内容です。
 デフォルトでは単に "sry" と送ります。
 
+## 高度なメッセージ
+
+チャットの内容に誤射相手のプレイヤー名や車輌名を含めることができます。
+{} で変数名をくくった文字列が、変数の内容に展開されます。
+
+下記の変数が使用可能です。
+
++ `playerName` 相手のプレイヤー名
++ `vehicleName` 相手の車輌名
+
+例えばチャットメッセージに相手プレイヤー名を含める場合は次のようになります。
+
+```
+<config.xml>
+    <delay>3.0</delay>
+    <cooldown>12.0</cooldown>
+    <message>sry {playerName}</message>
+</config.xml>
+```
+
