@@ -1,0 +1,5 @@
+<config.xml>
+    <delay>3.0</delay>
+    <cooldown>12.0</cooldown>
+    <message>sry</message><!-- メッセージの {playerName} はプレイヤー名に {vehicleName} は車輌名に置き換えられます -->
+</config.xml>

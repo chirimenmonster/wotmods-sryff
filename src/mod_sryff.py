@@ -55,18 +55,27 @@ class Control(object):
 
     def onAvatarReady(self):
         BigWorld.logInfo(MOD.NAME, 'onAvatarReady', None)
-        msgsCtl = BigWorld.player().guiSessionProvider.shared.messages
+        session = BigWorld.player().guiSessionProvider
+        self.battleCtx = session.getCtx()
+        msgsCtl = session.shared.messages
         msgsCtl.onShowPlayerMessageByCode += self.onShowPlayerMessageByCode
         msgsCtl.onShowPlayerMessageByKey += self.onShowPlayerMessageByKey
         self.teamChatCtrl = None
 
     def onShowPlayerMessageByCode(self, code, postfix, targetID, attackerID, equipmentID):
         BigWorld.logInfo(MOD.NAME, 'onShowPlayerMessageByCode: ({}, {}, {}, {}, {})'.format(code, postfix, targetID, attackerID, equipmentID), None)
+        if code == 'DEATH_FROM_SHOT' and postfix == 'SELF_ALLY':
+            target = self.battleCtx.getPlayerFullNameParts(targetID)
+            BigWorld.logInfo(MOD.NAME, 'onShowPlayerMessageByCode: name={}, vehicle={}'.format(target.playerName, target.vehicleName), None)
+            message = self.message.format(playerName=target.playerName, vehicleName=target.vehicleName)
+            self.delayedExecution(self.delay, self.cooldown, lambda: self.sendTeamChat(message))
 
-    def onShowPlayerMessageByKey(self, key, args, _):
-        BigWorld.logInfo(MOD.NAME, 'onShowPlayerMessageByKey: ({}, {})'.format(key, args), None)
+    def onShowPlayerMessageByKey(self, key, args, info):
+        BigWorld.logInfo(MOD.NAME, 'onShowPlayerMessageByKey: ({}, {}, {})'.format(key, args, info), None)
         if key == 'ALLY_HIT':
-            self.delayedExecution(self.delay, self.cooldown, lambda: self.sendTeamChat(self.message))
+            target = self.battleCtx.getPlayerFullNameParts(info[0][1])
+            message = self.message.format(playerName=target.playerName, vehicleName=target.vehicleName)
+            self.delayedExecution(self.delay, self.cooldown, lambda: self.sendTeamChat(message))
 
     def sendTeamChat(self, text):
         BigWorld.logInfo(MOD.NAME, 'sendTeamChat: "{}"'.format(text), None)
