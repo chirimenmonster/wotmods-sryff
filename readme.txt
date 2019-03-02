@@ -18,3 +18,8 @@ To install, copy .wotmod file (${package}) to your WoT mods folder
     <cooldown>12.0</cooldown>
     <message>sry</message>
 </config.xml>
+
+### message substitute
+
+{playerName}: target player name
+{vehicleName}: target vehicle name

@@ -10,6 +10,11 @@
             "method":   "plain",
             "root":     "mods/${config_dir}",
             "dirs":     [ "configs" ]
+        },
+        {
+            "method":   "plain",
+            "root":     "",
+            "files":     [ "readme.txt" ]
         }
     ]
 }
