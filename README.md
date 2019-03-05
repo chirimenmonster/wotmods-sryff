@@ -2,6 +2,7 @@
 
 This mod provids the function of sending "sry" to team chat when you 'erroneously' an ally.
 
+*Read this in other languages: [English](README.md), [日本語](README.ja.md)*
 
 ## Installation
 
