@@ -1,8 +1,9 @@
 # mod SryFF
 
-## この mod は
+味方を「誤射」したときにチームチャットに "sry" を送る mod です。
 
-味方を「誤射」したときにチームチャットに "sry" を送る機能を提供します。
+*Read this in other languages: [English](README.md), [日本語](README.ja.md)*
+
 
 ## インストール
 
@@ -23,7 +24,7 @@ wotmod ファイルは `chirimen.sryff_0.2.wotmod` のようになっていま�
 設定ファイルは XML 形式です（エンコーディングは UTF-8）。
 デフォルトの設定は次と同じです。
 
-```
+```xml
 <config.xml>
     <delay>3.0</delay>
     <cooldown>12.0</cooldown>
@@ -56,7 +57,7 @@ wotmod ファイルは `chirimen.sryff_0.2.wotmod` のようになっていま�
 
 例えばチャットメッセージに相手プレイヤー名を含める場合は次のようになります。
 
-```
+```xml
 <config.xml>
     <delay>3.0</delay>
     <cooldown>12.0</cooldown>
