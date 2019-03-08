@@ -33,15 +33,15 @@ The default setting is the same as the following.
 
 The meaning of each element is as follows.
 
-+ **delay**:
-This is the delay (in seconds) until team chat is sent after shooting.
++ ***delay***
+of the delay (in seconds) until team chat is sent after shooting.
 By default, I will send a chat after 3.0 seconds.
-+ **cooldown**:
-The time (in seconds) after sending cooldown team chat until next SryFF becomes valid.
++ ***cooldown***
+of the time (in seconds) after sending cooldown team chat until next SryFF becomes valid.
 Set so that chat is not sent too much with machine cannon etc.
 By default, we do not send chat for 12.0 seconds.
-+ **message**:
-The content of the team chat to send. By default it simply sends "sry".
++ ***message***
+of the team chat to send. By default it simply sends "sry".
 
 
 ## Advanced configuration
@@ -51,8 +51,8 @@ A character string enclosed with a variable name in {} is expanded to the conten
 
 The following variables can be used.
 
-+ **playerName** of the opponent player
-+ **vehicleName** of the other car
++ ***playerName*** of the target player name
++ ***vehicleName*** of the target vehicle name
 
 For example, if you include the name of the opponent player in the chat message, it will be as follows.
 
